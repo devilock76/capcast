@@ -1,0 +1,21 @@
+<p>Welcome to the NC CapCast</p>
+<div id="LatestNews">
+  <h2>Latest News</h2>
+  <% @posts.each do |post| %>
+    <h3><%= post.title %></h3>
+    <p><%= post.text %></p>
+  <% end %><br>
+  <%= link_to 'See All News', posts_path %>
+</div>
+<div id="LatestEpisodes">
+  <h2>Latest Episodes</h2>
+  <% @episodes.each do |episode| %>
+    <h3><%= episode.number %> <%= episode.title %></h3>
+    <p><%= episode.description %></p>
+    <img src="<%= episode.image %>"></img><br>
+    <a href="<%= episode.audio %>">Listen Here</a><br>
+  <% end %><br>
+  <%= link_to 'See All Episodes', episodes_path %>
+</div>
+
+<p>Copyright NC CapCast 2015</p>

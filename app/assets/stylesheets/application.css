@@ -1,0 +1,27 @@
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #333;
+}
+
+div {
+  padding: 5px;
+  float: top;
+}
+
+#Page {
+  background-color: #FFF;
+  overflow: auto;
+}
+
+#LatestNews {
+  float: left;
+  width: 40%;
+}
+
+#LatestEpisodes {
+  float: left;
+  width: 40%;
+}
