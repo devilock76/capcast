@@ -4,7 +4,9 @@ class EpisodesController < ApplicationController
   # GET /episodes
   # GET /episodes.json
   def index
-    @episodes = Episode.all.reverse
+    # @episodes = Episode.all.reverse.paginate(:page => params[:page], :per_page => 2)
+    # @episodes = Episode.paginate(:page => params[:page], :per_page => 2, :order => "number DESC")
+    @episodes = Episode.order("number DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /episodes/1

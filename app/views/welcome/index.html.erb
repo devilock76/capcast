@@ -10,7 +10,7 @@
 <div id="LatestEpisodes">
   <h2>Latest Episodes</h2>
   <% @episodes.each do |episode| %>
-    <h3><%= episode.number %> <%= episode.title %></h3>
+    <h3><%= episode.number.to_s.rjust(4, "0") %>: <%= episode.title %></h3>
     <p><%= episode.description %></p>
     <img src="<%= episode.image %>"></img><br>
     <a href="<%= episode.audio %>">Listen Here</a><br>

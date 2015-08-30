@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.reverse
+    # @posts = Post.all.reverse
+    @posts = Post.order("id DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /posts/1
