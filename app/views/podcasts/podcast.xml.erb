@@ -1,0 +1,11 @@
+<xml version`>
+<podcast>Details Here</podcast>
+<episodes>
+  <%= @episodes.each do |episode| %>
+  <title><%= episode.title %></title>
+  <desc><%= episode.description %></desc>
+  <img><%= episode.image %></img>
+  <audio><%= episode.audio %></audio>
+  <% end %>
+</episodes>
+</xml>
