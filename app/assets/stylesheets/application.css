@@ -25,3 +25,8 @@ div {
   float: left;
   width: 40%;
 }
+
+#Footer {
+  float: none;
+  left: 0;
+}
